@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Carousel from "./carousel.component";
 
 function Banners() {
 
@@ -14,14 +15,7 @@ function Banners() {
     return (
         !banners.length ?
         <div> No banners Available</div> :
-        banners.map((banner) => {
-            return (
-                banner.isActive && <div key={banner.id}>
-                    {/* <div>Order: {banner.order}</div> How to use order? */}
-                    <img src={banner.bannerImageUrl} alt={banner.bannerImageAlt} />
-                </div>
-            );
-        })
+        <Carousel banners={banners} />
     );
   }
   
