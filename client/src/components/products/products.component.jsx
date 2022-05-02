@@ -38,16 +38,16 @@ function Products() {
     
     return (
         <div className="d-flex flex-row products">
-            <div className="sidebar">
-                {categories.map((category) => {
+            <div className="sidebar w-20">
+            {categories.map((category) => {
                     return (
                         category.enabled &&
                         <button className={`sidebar-button ${activeCategory === category.id && 'selected'}`} onClick={() => filterProducts(category)} key={category.id}>{category.name}</button>
                     )
                 })}
             </div>
-            <div className="d-flex flex-wrap">
-                {filteredProducts.map((product, index) => {
+            <div className="w-80 d-flex flex-wrap justify-content-between">
+            {filteredProducts.map((product, index) => {
                     return (
                         <Product key={`${product.id}${index}`} product={product} />
                     )

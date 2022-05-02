@@ -1,10 +1,9 @@
 .sidebar {
     background-color: lightgray;
-    width: 250px;
 }
 
 .sidebar-button {
-    width: inherit;
+    width: 100%;
     border: 0px;
     border-bottom: 2px solid darkgray;
     background-color: inherit;
