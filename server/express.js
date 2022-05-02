@@ -7,6 +7,7 @@ var cors = require("cors");
 const banners = require('./banners/index.get.json');
 const categories = require('./categories/index.get.json');
 const products = require('./products/index.get.json');
+const cart = require('./addToCart/index.post.json');
 
 app.use(express.json());
 app.use(cors());
@@ -23,11 +24,8 @@ app.get("/products", (req, res) => {
   res.send(products);
 });
 
-app.post('/api/world', (req, res) => {
-  console.log(req.body);
-  res.send(
-    `I received your POST request. This is what you sent me: ${req.body.post}`,
-  );
+app.post('/addToCart', (req, res) => {
+  res.send(cart);
 });
 
 app.post("/newcourse", (req, res) => {
