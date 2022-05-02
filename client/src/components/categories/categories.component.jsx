@@ -19,7 +19,7 @@ function Categories() {
                 // Order is pending {category.order}
                 category.enabled && 
                 <div className={style} key={`${category.id}${index}`}>
-                    <img src={category.imageUrl} />
+                    <img src={category.imageUrl} alt={category.name} />
                     <div className="d-flex align-items-center justify-content-center">
                     <div className="d-flex flex-column">
                         <div>{category.name}</div>
