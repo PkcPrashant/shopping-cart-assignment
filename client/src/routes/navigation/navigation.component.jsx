@@ -1,13 +1,17 @@
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 function Navigation() {
   return (
-    <div>
+    <>
         <div>
-            I am navigation bar
+            LOGO
+            <div>
+              <Link to='/'>Home</Link>
+              <Link to='/products'>Products</Link>
+            </div>
         </div>
         <Outlet />
-    </div>
+    </>
   );
 }
 
