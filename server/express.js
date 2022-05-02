@@ -5,12 +5,17 @@ const path = require("path");
 var cors = require("cors");
 
 const banners = require('./banners/index.get.json');
+const categories = require('./categories/index.get.json');
 
 app.use(express.json());
 app.use(cors());
 
 app.get("/banners", (req, res) => {
   res.send(banners);
+});
+
+app.get("/categories", (req, res) => {
+  res.send(categories);
 });
 
 app.post('/api/world', (req, res) => {
