@@ -1,9 +1,10 @@
-import Button from 'react-bootstrap/Button'
+import Button from 'react-bootstrap/Button';
+import './product.css';
 
 function Product({ product }) {
     return (
         <div className="w-20 p-3 m-2 shadow">
-            <h6>{product.name}</h6>
+            <p className="bold">{product.name}</p>
             <img src={product.imageURL} className="w-100" height="150px" />
             <p className="text">{product.description}</p>
             <div className="d-flex flex-row justify-content-between align-items-baseline">

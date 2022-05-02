@@ -1,0 +1,14 @@
+.sidebar {
+    background-color: lightgray;
+    width: 250px;
+}
+
+.sidebar-button {
+    width: inherit;
+    border: 0px;
+    border-bottom: 2px solid darkgray;
+    background-color: inherit;
+    padding-bottom: 10px;
+    text-align: left;
+    padding-left: 10px;
+}

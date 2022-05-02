@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Product from "./product.component";
-import './product.css';
+import './products.css';
 
 function Products() {
 
@@ -21,13 +21,11 @@ function Products() {
     
     return (
         <div className="d-flex flex-row">
-            <div className="side-bar">
+            <div className="sidebar">
                 {categories.map((category) => {
                     return (
                         category.enabled &&
-                        <div key={category.id}>
-                            {category.name}
-                        </div>
+                        <button className="sidebar-button" key={category.id}>{category.name}</button>
                     )
                 })}
             </div>
