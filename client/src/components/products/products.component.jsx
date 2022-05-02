@@ -37,7 +37,7 @@ function Products() {
     }
     
     return (
-        <div className="d-flex flex-row">
+        <div className="d-flex flex-row products">
             <div className="sidebar">
                 {categories.map((category) => {
                     return (
@@ -46,7 +46,7 @@ function Products() {
                     )
                 })}
             </div>
-            <div className="products d-flex flex-wrap">
+            <div className="d-flex flex-wrap">
                 {filteredProducts.map((product, index) => {
                     return (
                         <Product key={`${product.id}${index}`} product={product} />

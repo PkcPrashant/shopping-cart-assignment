@@ -16,3 +16,7 @@
 .selected {
     background-color: darkgray;
 }
+
+.products {
+    margin-top: -3rem;
+}
