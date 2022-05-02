@@ -21,6 +21,13 @@ code {
   width: 10%;
 }
 
+.w-12 {
+  width: 12%;
+}
+
+.w-30 {
+  width: 30%;
+}
 
 .w-80 {
   width: 80%
