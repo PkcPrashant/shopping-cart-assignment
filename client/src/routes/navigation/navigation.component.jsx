@@ -9,12 +9,18 @@ function Navigation() {
               <img src="/static/images/logo_2x.png" className="w-50" alt="Sabka Bazaar" />
             </div>
             <div className="flex-grow-1 align-self-center">
-              <Link className="link" to='/'>Home</Link>
+              <Link className="link margin-right-50" to='/'>Home</Link>
               <Link className="link" to='/products'>Products</Link>
             </div>
-            <div className="d-flex align-self-end align-items-center justify-content-center w-12 cart">
-              <img src="/static/images/cart.svg" className="w-30" alt="Cart Items" />
-              <span>0 Items</span>
+            <div className="d-flex w-12 flex-column justify-content-between">
+              <div className="d-flex justify-content-end">
+                <Link className="link me-3" to='/signin'>SignIn</Link>
+                <Link className="link" to='/register'>Register</Link>
+              </div>
+              <div className="d-flex align-items-center justify-content-center cart">
+                <img src="/static/images/cart.svg" className="w-30" alt="Cart Items" />
+                <span>0 Items</span>
+              </div>
             </div>
         </div>
         <Outlet />
