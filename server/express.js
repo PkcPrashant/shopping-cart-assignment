@@ -28,14 +28,6 @@ app.post('/addToCart', (req, res) => {
   res.send(cart);
 });
 
-app.post("/newcourse", (req, res) => {
-  res.json({ msg: "success" });
-});
-
-app.delete("/courses/:id", (req, res) => {
-  res.json({ msg: "success" });
-});
-
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
 });
