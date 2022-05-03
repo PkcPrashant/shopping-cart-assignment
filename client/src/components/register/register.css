@@ -1,0 +1,15 @@
+.input-fields {
+    border: none;
+    border-radius: 0px;
+    border-bottom: 2px solid lightgray;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.input-fields:focus {
+    outline: none;
+}
+
+.bold {
+    font-weight: bold;
+}
