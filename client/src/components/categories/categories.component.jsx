@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import Button from 'react-bootstrap/Button'
+import Button from 'react-bootstrap/Button';
+import './categories.css';
 
 function Categories() {
 
@@ -13,20 +14,17 @@ function Categories() {
     }, []);
     
     return (
-        categories.map((category, index) => {
-            const style = `d-flex ${!index ? 'flex-row' : 'flex-row-reverse'}`
+        categories.filter((category) => category.enabled)
+        .map((category, index) => {
             return (
                 // Order is pending {category.order}
-                category.enabled && 
-                <div className={style} key={`${category.id}${index}`}>
-                    <img src={category.imageUrl} alt={category.name} />
-                    <div className="d-flex align-items-center justify-content-center">
-                    <div className="d-flex flex-column">
-                        <div>{category.name}</div>
-                        <div>{category.description}</div>
-                        <Button>Explore {category.key}</Button>
-                    </div>
-                    </div>
+                <div className={`d-flex ${!(index%2) ? 'flex-row' : 'flex-row-reverse'} mb-2 shadow`} key={`${category.id}${index}`}>
+                    <img className="w-25" src={category.imageUrl} alt={category.name} />
+                        <div className="d-flex flex-column align-items-center align-self-center mx-auto">
+                            <div>{category.name}</div>
+                            <div>{category.description}</div>
+                            <Button className="w-fit-content">Explore {category.key}</Button>
+                        </div>
                 </div>
             )
         })

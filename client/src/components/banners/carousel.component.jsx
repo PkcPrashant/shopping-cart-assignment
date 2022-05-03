@@ -9,6 +9,7 @@ function Carousel({banners}) {
     };
 
     return (
+        <div className="mb-2 shadow">
         <BootstrapCarousel variant="dark" activeIndex={index} onSelect={handleSelect}>
             {banners.map((banner, index) => {
                 return (
@@ -24,6 +25,7 @@ function Carousel({banners}) {
                 );
             })}
         </BootstrapCarousel>
+        </div>
     );
 };
 

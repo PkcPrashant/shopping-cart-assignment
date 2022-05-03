@@ -37,7 +37,7 @@ function Products() {
     }
     
     return (
-        <div className="d-flex flex-row products">
+        <div className="d-flex flex-row">
             <div className="sidebar w-20">
             {categories.map((category) => {
                     return (

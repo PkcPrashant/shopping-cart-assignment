@@ -4,7 +4,7 @@ import './navigation.css';
 function Navigation() {
   return (
     <>
-        <div className="w-100 p-1 mb-5 shadow d-flex">
+        <div className="w-100 p-1 shadow d-flex">
             <div>
               <img src="/static/images/logo_2x.png" className="w-50" alt="Sabka Bazaar" />
             </div>
