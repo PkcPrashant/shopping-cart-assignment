@@ -1,0 +1,31 @@
+.counterbtn {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    padding: 3px;
+    outline: none;
+    background: transparent;
+    background-color: #bf2957;
+    color:white;
+    border: none;
+    cursor: pointer;
+}
+
+.checkoutbtn {
+    padding: 3px;
+    outline: none;
+    background: transparent;
+    background-color: #bf2957;
+    color:white;
+    border: none;
+    cursor: pointer;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.cartcontainer {
+    border: 1px solid black;
+    float: right;
+}

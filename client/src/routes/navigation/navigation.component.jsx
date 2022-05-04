@@ -30,10 +30,10 @@ function Navigation() {
                 <Link className="link me-3" to='/signin'>SignIn</Link>
                 <Link className="link" to='/register'>Register</Link>
               </div>
-              <div className="d-flex align-items-center justify-content-center cart">
+              <Link to='/cart' className="d-flex align-items-center justify-content-center cart link">
                 <img src="/static/images/cart.svg" className="w-30" alt="Cart Items" />
                 <span>{quantity} Items</span>
-              </div>
+              </Link>                
             </div>
         </div>
         <Outlet />
