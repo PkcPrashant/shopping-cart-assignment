@@ -1,7 +1,11 @@
 import Button from 'react-bootstrap/Button';
 import './product.css';
+import { useDispatch } from "react-redux";
+import { addToCart } from '../../redux/action/cart';
 
 function Product({ product }) {
+
+    const dispatch = useDispatch();
 
     const buyProduct = () => {
         fetch("http://localhost:5000/addToCart", {
@@ -14,7 +18,7 @@ function Product({ product }) {
             .then((res) => res.json())
             .then((message) => {
                 if(message.response === 'Success') {
-                    // Add cart count
+                    dispatch(addToCart(product));
                 }
             });
     }

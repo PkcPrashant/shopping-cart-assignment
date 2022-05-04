@@ -21,20 +21,8 @@ class Api {
         return new Promise((resolve, reject) => {
             this.axiosService
             .post(path, {headers})
-            .then(resp => {
-                resolve({
-                    status: resp.status,
-                    statusText: resp.statusText,
-                    data: resp.data,
-                })
-            })
-            .catch(error => {
-                reject({
-                    status: false,
-                    statusText: "Error",
-                    error
-                })
-            })
+            .then(resolve)
+            .catch(reject)
         })
     }
 }

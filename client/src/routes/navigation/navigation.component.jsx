@@ -1,7 +1,20 @@
+import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import { Link, Outlet } from "react-router-dom";
 import './navigation.css';
 
 function Navigation() {
+
+  const [quantity, setQuantity] = useState(0);
+  const cart = useSelector(state => state.cart);
+
+  useEffect(() => {
+    const productsQuantity = cart.data.map((cartData) => cartData.quantity).reduce(
+      (previousValue, currentValue) => previousValue + currentValue, 0
+    );
+    setQuantity(productsQuantity);
+  }, [cart]);
+
   return (
     <>
         <div className="w-100 p-1 shadow d-flex">
@@ -19,7 +32,7 @@ function Navigation() {
               </div>
               <div className="d-flex align-items-center justify-content-center cart">
                 <img src="/static/images/cart.svg" className="w-30" alt="Cart Items" />
-                <span>0 Items</span>
+                <span>{quantity} Items</span>
               </div>
             </div>
         </div>
