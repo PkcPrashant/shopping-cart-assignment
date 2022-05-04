@@ -1,7 +1,11 @@
 import Button from 'react-bootstrap/Button';
+import { useNavigate } from 'react-router-dom';
 import './register.css';
 
+
 function Register() {
+
+    const navigate = useNavigate();
 
     return (
         <div className="d-flex flex-row justify-content-around m-5">
@@ -16,7 +20,7 @@ function Register() {
                     <input type="password" className="input-fields" required placeholder='Password' />
                     <input type="password" className="input-fields" required placeholder='Confirm Password' />
                 <div>
-                    <Button className='w-100'>Signup</Button>
+                    <Button className='w-100' onClick={() => navigate('/')}>Signup</Button>
                 </div>
             </form>
         </div>
