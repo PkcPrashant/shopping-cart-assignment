@@ -1,21 +1,23 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Carousel from "./carousel.component";
+import { getBanners } from '../../redux/action/banners';
+import { useDispatch, useSelector } from "react-redux";
 
 function Banners() {
 
-    const [banners, setBanners] = useState([{}]);
+    const dispatch = useDispatch();
+    const banners = useSelector(state => state.banners);
 
     useEffect(() => {
-        fetch('http://localhost:5000/banners')
-        .then((response) => response.json())
-        .then((response) => setBanners(response))
-        .catch((error) => console.log('Error ', error))
-    }, []);
+        dispatch(getBanners());
+    }, [dispatch]);
     
     return (
-        !banners.length ?
-        <div> No banners Available</div> :
-        <Carousel banners={banners} />
+        banners.isLoading ?
+            <div>Loading</div> :
+            banners.error ?
+                <div>{banners.error.message}</div> :
+                <Carousel banners={banners.data} />
     );
   }
   
